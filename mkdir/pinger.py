@@ -1,8 +1,10 @@
 import requests
+from datetime import datetime
 
 url_template="https://simurg.space/gen_file?data=obs&date={date}"
-date="2026-02-19"
+now=datetime.now()
+date=now.strftime("%Y-%m-%d")
 url=url_template.format(date=date)
 
 response=requests.get(url=url_template,stream=True)
-print(f"For {date}: responce")
+print(f"For {date}: {response}")
