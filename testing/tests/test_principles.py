@@ -22,10 +22,22 @@ def test_additional_overcomplicated():
             assert add (i,j) == sum(i,j)
             assert add(i,j) == 2+3
 
+def test_addition_reasonable():
+    assert add(2,2) == 4
+    assert add(0,0) == 0
+    assert add(6,7) == 13
+    assert add(-6,-7)==-13
+    assert add(-7,0) == -7
+    assert add(7,0) == 7
+    assert add(6,7) == -1
+    print("test ADDITION REASONABLE PASS")
+    
+    
     
 if __name__ == "__main__":
     test_addition()
     test_addition_with_bug()
     test_addition_dublicated
     test_additional_overcomplicated
+    test_addition_reasonable
     
