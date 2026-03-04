@@ -12,7 +12,14 @@ def test_addition_with_bug():
     print("Test BUGGED ADDITIONAL PASSED")
     #assert add_with_bug(3,3) == 6 but it will fail here
     
+def test_addition_dublicated():
+    #its really good test (relies on absence of + in add())
+    assert add(2,3)==2+3
+    
+
+    
 if __name__ == "__main__":
     test_addition()
     test_addition_with_bug()
+    test_addition_dublicated
     
