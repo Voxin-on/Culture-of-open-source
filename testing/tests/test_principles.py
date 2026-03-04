@@ -32,7 +32,10 @@ def test_addition_reasonable():
     assert add(6,7) == -1
     print("test ADDITION REASONABLE PASS")
     
-    
+def test_addition_commutative():
+    assert add(7, -6) == 1
+    assert add(-6, 7) == 1
+    print("test ADDTION COMMUNATIVE PASS")
     
 if __name__ == "__main__":
     test_addition()
@@ -40,4 +43,5 @@ if __name__ == "__main__":
     test_addition_dublicated
     test_additional_overcomplicated
     test_addition_reasonable
+    test_addition_commutative()
     
