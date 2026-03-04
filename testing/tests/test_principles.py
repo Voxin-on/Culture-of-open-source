@@ -1,7 +1,7 @@
 import sys
 sys.path.append("../src")
 # TODO: make it with 'pip install -e .'
-from math_demo import add, add_with_bug
+from math_demo import add, add_with_bug, calculate_tax_with_bag, calculate_tax
 
 def test_addition():
     assert add(2,2) == 4
@@ -37,6 +37,31 @@ def test_addition_commutative():
     assert add(-6, 7) == 1
     print("test ADDTION COMMUNATIVE PASS")
     
+def test_tax_calculation_pesticited():
+    assert test_calculate_tax_with_bag(1000)==150
+    assert test_calculate_tax_with_bag(100)==15
+    assert test_calculate_tax_with_bag(10)==1.5
+    assert test_calculate_tax_with_bag(1)==0.15
+    assert test_calculate_tax_with_bag(1000)==150
+    assert test_calculate_tax_with_bag(-1000)==-150
+    assert test_calculate_tax_with_bag(0)==0
+    print("test TAX_CALCULATION_PESTICITED PASS")
+    #fail with floats
+    #assert test_calculate_tax_with_bag(24.5)==3.67 # 3.675
+    
+def test_tax_calculation():
+    assert test_calculate_tax_with_bag(1000)==150.0
+    assert test_calculate_tax_with_bag(100)==15.0
+    assert test_calculate_tax_with_bag(10)==1.5
+    assert test_calculate_tax_with_bag(1)==0.15
+    assert test_calculate_tax_with_bag(1000)==150.0
+    assert test_calculate_tax_with_bag(-1000)==-150.0
+    assert test_calculate_tax_with_bag(0)==0.0
+    print("test TAX_CALCULATION PASS")
+    assert test_calculate_tax_with_bag(24.5)==3.67 # 3.675
+    
+
+
 if __name__ == "__main__":
     test_addition()
     test_addition_with_bug()
@@ -44,4 +69,6 @@ if __name__ == "__main__":
     test_additional_overcomplicated
     test_addition_reasonable
     test_addition_commutative()
+    test_tax_calculation_pesticited
+    test_tax_calculation
     
