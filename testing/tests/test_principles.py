@@ -16,10 +16,16 @@ def test_addition_dublicated():
     #its really good test (relies on absence of + in add())
     assert add(2,3)==2+3
     
+def test_additional_overcomplicated():
+    for i in range(0,2**32):
+        for j in range(0,2**32):
+            assert add (i,j) == sum(i,j)
+            assert add(i,j) == 2+3
 
     
 if __name__ == "__main__":
     test_addition()
     test_addition_with_bug()
     test_addition_dublicated
+    test_additional_overcomplicated
     
