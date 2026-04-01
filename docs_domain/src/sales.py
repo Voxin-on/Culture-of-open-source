@@ -2,6 +2,16 @@
 
 
 def _parse_record(line :str):
+    """ Parses one record from sales files:
+        
+    Pararametrs:
+        line - one line record about sales `product_name,category,unit_price,quantity`
+        
+    Returns:
+        sale information in form dict
+    
+    """
+    
     sale = line.strip().split(",")
     if len(sale) != 4:  # according specs all sales have 4 cols
         return None
