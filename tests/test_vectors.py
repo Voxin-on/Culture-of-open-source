@@ -1,5 +1,5 @@
 import pytest
-from vectors import vector_add, scalar_product
+from vectors_calc import vector_add, scalar_product
 
 
 # vector_add
