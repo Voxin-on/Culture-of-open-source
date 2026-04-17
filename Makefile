@@ -19,3 +19,5 @@ lint:
 
 format:
 	$(VENV)/bin/black src/
+
+check: typecheck check-requirements
