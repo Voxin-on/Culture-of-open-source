@@ -10,3 +10,6 @@ install: venv
 
 check-requirements:
 	$(PY) scripts/check_requirements.py src/ requirements.txt
+
+typecheck:
+	$(VENV)/bin/mypy src/
