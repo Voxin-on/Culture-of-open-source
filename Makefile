@@ -13,3 +13,9 @@ check-requirements:
 
 typecheck:
 	$(VENV)/bin/mypy src/
+
+lint:
+	$(VENV)/bin/flake8 src/
+
+format:
+	$(VENV)/bin/black src/

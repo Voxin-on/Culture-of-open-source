@@ -2,3 +2,5 @@ requests
 numpy
 fastapi
 mypy
+flake8
+black
