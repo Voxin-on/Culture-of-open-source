@@ -7,3 +7,6 @@ venv:
 
 install: venv
 	$(PIP) install -r requirements.txt
+
+check-requirements:
+	$(PY) scripts/check_requirements.py src/ requirements.txt
