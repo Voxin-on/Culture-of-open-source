@@ -1,0 +1,10 @@
+.PHONY: create-structure
+
+create-structure:
+	mkdir -p src tests docs
+	touch src/.gitkeep tests/.gitkeep
+	touch docs/DOMAIN.md README.md .gitignore
+	touch setup.py requirements.txt
+
+reqs:
+	pipreqs . --force --ignore venv
