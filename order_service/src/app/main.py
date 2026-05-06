@@ -24,7 +24,7 @@ class OrderResponse(BaseModel):
     quantity: int
     unit_price: float
     total: float
-    
+
 
 class ProductFromService(BaseModel):
     id: str
